@@ -3,7 +3,14 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useQuery } from "react-query";
 import { Counrty } from "../assets/types";
 import Tips from "./Tips";
+import { Icon } from "leaflet";
 
+
+
+const customIcon = new Icon({
+	iconUrl: "https://img.icons8.com/?size=512&id=44023&format=png",
+	iconSize: [35, 35],
+});
 export default function MapBox() {
 	const { isLoading, error, data } = useQuery(
 		"all-country-info",
@@ -37,6 +44,7 @@ export default function MapBox() {
 						<Marker
 							position={[c.countryInfo.lat, c.countryInfo.long]}
 							key={c.country}
+							icon={customIcon}
 						>
 							<Popup>
 								<div className="leading-none">
