@@ -52,7 +52,7 @@ export default function LineGraph() {
 	];
 	return (
 		<section className="p-5">
-			<Tips second="Line Graph Chart. May be this line chart is not same that were required. I did not understant that form which API I have to make a line chart. Sorry😒" />
+			<Tips second="Line Graph Chart. May be this line chart is not same that was required. I did not understant that form which API I have to make a line chart. Sorry😒" />
 
 			<ResponsiveContainer width="95%" height={500}>
 				<LineChart
